@@ -76,6 +76,7 @@
         d3.event.preventDefault();
 
         centers = d3.touches(svg.node());
+       
 
         var g = svg.selectAll("g.touch")
                 .data(centers, function (d) {

@@ -27,10 +27,11 @@
         var hours = data.dimension(function(d){
             return d3.time.hour(timeFormat.parse(d.date));
         });
+        
         var totalByHour = hours.group().reduceSum(function(d){
                                 return d.total;
                             });
-
+        console.log(totalByHour);
         var types = data.dimension(function(d){return d.type;});
         var transactionByType = types.group().reduceCount();
         

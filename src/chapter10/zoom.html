@@ -50,6 +50,8 @@
             });
 
     function zoom() {
+        console.log(d3.event.translate);
+        console.log(d3.event.scale);
         svg.attr("transform", "translate(" 
             + d3.event.translate 
             + ")scale(" + d3.event.scale + ")");
